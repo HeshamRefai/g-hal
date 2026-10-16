@@ -8,6 +8,7 @@ import { governanceRouter } from "./routers/governance";
 import { exceptionRouter } from "./routers/exception";
 import { memoryRouter } from "./routers/memory";
 import { aiRouter } from "./routers/ai";
+import { realtimeRouter } from "./routers/realtime";
 
 export const appRouter = createRouter({
   ping: publicQuery.query(() => ({ ok: true, ts: Date.now() })),
@@ -20,6 +21,7 @@ export const appRouter = createRouter({
   exception: exceptionRouter,
   memory: memoryRouter,
   ai: aiRouter,
+  realtime: realtimeRouter,
 });
 
 export type AppRouter = typeof appRouter;
